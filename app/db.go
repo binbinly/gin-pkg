@@ -46,7 +46,7 @@ func loadDBConf(cfg *DBConfig) error {
 			"Port":            3306,
 			"User":            "root",
 			"Password":        "root",
-			"Database":        "chat",
+			"Database":        "app",
 			"Debug":           true,
 			"MaxIdleConn":     10,
 			"MaxOpenConn":     100,

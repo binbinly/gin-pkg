@@ -13,7 +13,6 @@ var (
 func SetDefaultConf(v *viper.Viper) {
 	v.SetDefault("Env", "local")
 	v.SetDefault("Name", "gin-app")
-	v.SetDefault("DfsUrl", "http://127.0.0.1:9050/group1/")
 	v.SetDefault("Mode", "debug")
 	v.SetDefault("JwtTimeout", 864000)
 	v.SetDefault("LogLevel", "debug")
@@ -25,14 +24,7 @@ func SetDefaultConf(v *viper.Viper) {
 		ReadTimeout:  5 * time.Second,
 		WriteTimeout: 5 * time.Second,
 	})
-	v.SetDefault("Websocket", ServerConfig{
-		Network:      "tcp",
-		Addr:         ":9510",
-		ReadTimeout:  5 * time.Second,
-		WriteTimeout: 5 * time.Second,
-	})
 	v.BindEnv("name")
-	v.BindEnv("dfsUrl", "APP_DFS_URL")
 	v.BindEnv("debug")
 }
 
