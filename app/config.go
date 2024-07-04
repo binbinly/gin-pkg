@@ -41,6 +41,8 @@ type Config struct {
 	Proxy      bool // 是否开启代理 http://[host]/ws -> ws://[host]
 	HTTP       ServerConfig
 	Websocket  ServerConfig
+	Sms        SmsConfig
+	Eth        EthConfig
 }
 
 type ServerConfig struct {
@@ -48,4 +50,15 @@ type ServerConfig struct {
 	Addr         string
 	ReadTimeout  time.Duration
 	WriteTimeout time.Duration
+}
+
+// SmsConfig 短信配置
+type SmsConfig struct {
+	IsReal bool
+}
+
+// EthConfig 以太坊配置
+type EthConfig struct {
+	NetworkID  int
+	NetworkUrl string
 }

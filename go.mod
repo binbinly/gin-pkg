@@ -12,9 +12,9 @@ require (
 	github.com/rs/xid v1.5.0
 	github.com/spf13/viper v1.18.2
 	github.com/stretchr/testify v1.9.0
-	github.com/vearne/gin-timeout v0.1.7
-	golang.org/x/sync v0.6.0
-	gorm.io/gorm v1.25.8
+	github.com/vearne/gin-timeout v0.1.8
+	golang.org/x/sync v0.7.0
+	gorm.io/gorm v1.25.10
 )
 
 require (
